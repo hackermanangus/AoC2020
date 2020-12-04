@@ -3,5 +3,5 @@ mod second_day;
 mod third_day;
 
 fn main() {
-    println!("{}", second_day::day2::psw_philosophy_p2().unwrap());
+    println!("{}",third_day::toboggan_trajectory_p2().unwrap());
 }
