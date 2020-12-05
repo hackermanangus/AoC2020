@@ -1,10 +1,10 @@
 use std::fmt::Error;
 use std::fs;
 use std::path::Path;
+
 use regex::Regex;
 
 pub fn psw_philosophy_p1() -> Result<i32, ()> {
-
     let mut counter = 0;
     // Unwrap because it should never go wrong
     let contents = fs::read_to_string(Path::new("./input/input_2.txt")).unwrap();
@@ -21,20 +21,19 @@ pub fn psw_philosophy_p1() -> Result<i32, ()> {
         println!("{} {} {} {}", &low_freq, &high_freq, &letter, &pws);
         for char in pws.chars() {
             if &char == letter {
-                temp_inc+=1;
+                temp_inc += 1;
             }
         }
         if low_freq <= &temp_inc && &temp_inc <= high_freq {
-            counter+=1;
+            counter += 1;
         }
     }
 
-    return Ok(counter)
+    return Ok(counter);
 }
 
 //noinspection ALL,DuplicatedCode
 pub fn psw_philosophy_p2() -> Result<u32, ()> {
-
     let mut counter = 0;
     // Unwrap because it should never go wrong
     let contents = fs::read_to_string(Path::new("./input/input_2.txt")).unwrap();
@@ -48,18 +47,15 @@ pub fn psw_philosophy_p2() -> Result<u32, ()> {
         let letter = &result["letter"].parse::<char>().unwrap();
         let pws = &result["pws"];
         let char_arr: Vec<char> = pws.chars().collect();
-        if &char_arr[low_freq-1] == letter && &char_arr[high_freq-1] != letter {
+        if &char_arr[low_freq - 1] == letter && &char_arr[high_freq - 1] != letter {
             println!("{} {} {} {}", &low_freq, &high_freq, &letter, &pws);
-            counter+=1;
-        }
-        else if &char_arr[low_freq-1] != letter && &char_arr[high_freq-1] == letter {
+            counter += 1;
+        } else if &char_arr[low_freq - 1] != letter && &char_arr[high_freq - 1] == letter {
             println!("{} {} {} {}", &low_freq, &high_freq, &letter, &pws);
-            counter+=1;
-        }
-        else {
-        }
+            counter += 1;
+        } else {}
     }
 
 
-    return Ok(counter)
+    return Ok(counter);
 }
