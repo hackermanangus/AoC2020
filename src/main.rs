@@ -1,7 +1,9 @@
-mod first_day;
-mod second_day;
-mod third_day;
+mod day_1;
+mod day_2;
+mod day_3;
+mod day_4;
 
 fn main() {
-    println!("{}",third_day::toboggan_trajectory_p2().unwrap());
+    //day_4::passport_processing_p1().unwrap();
+    println!("{}", day_4::passport_processing_p1().unwrap());
 }

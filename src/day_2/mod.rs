@@ -7,7 +7,7 @@ pub fn psw_philosophy_p1() -> Result<i32, ()> {
 
     let mut counter = 0;
     // Unwrap because it should never go wrong
-    let contents = fs::read_to_string(Path::new("./input/input_day_two_p1.txt")).unwrap();
+    let contents = fs::read_to_string(Path::new("./input/input_2.txt")).unwrap();
 
     let re = Regex::new(r#"(?sm)(?P<low_freq>[0-9]+)-(?P<high_freq>[0-9]+) (?P<letter>[a-z]): (?P<pws>[a-z]+)"#).unwrap();
 
@@ -37,7 +37,7 @@ pub fn psw_philosophy_p2() -> Result<u32, ()> {
 
     let mut counter = 0;
     // Unwrap because it should never go wrong
-    let contents = fs::read_to_string(Path::new("./input/input_day_two_p1.txt")).unwrap();
+    let contents = fs::read_to_string(Path::new("./input/input_2.txt")).unwrap();
 
     let re = Regex::new(r#"(?sm)(?P<low_freq>[0-9]+)-(?P<high_freq>[0-9]+) (?P<letter>[a-z]): (?P<pws>[a-z]+)"#).unwrap();
 

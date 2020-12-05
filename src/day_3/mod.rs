@@ -2,7 +2,7 @@ use std::fs;
 use std::path::Path;
 
 pub fn toboggan_trajectory_p1() -> Result<i32, ()> {
-    let contents = fs::read_to_string(Path::new("./input/input_day_three_p1.txt")).unwrap();
+    let contents = fs::read_to_string(Path::new("./input/input_3.txt")).unwrap();
     let array_row: Vec<&str> = contents.split_whitespace().collect();
     let mut matrix: Vec<Vec<char>> = Vec::new();
     for el in array_row.into_iter() {
@@ -35,7 +35,7 @@ pub fn toboggan_trajectory_p2() -> Result<i64, ()> {
     let mut total: Vec<i64> = Vec::new();
 
     for slope in slopes {
-        let contents = fs::read_to_string(Path::new("./input/input_day_three_p1.txt")).unwrap();
+        let contents = fs::read_to_string(Path::new("./input/input_3.txt")).unwrap();
         let array_row: Vec<&str> = contents.split_whitespace().collect();
         let mut matrix: Vec<Vec<char>> = Vec::new();
         for el in array_row.into_iter() {
